@@ -2,12 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from '/src/componentes/Header.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  let gato = {
+    nome: 'Cleitinho',
+    profissao: 'Pet da casa'
+  }
 
   return (
     <>
+      <Header titulo={'Título1'} subTitulo={'Titulo2'}></Header>
+      <Header titulo={gato.nome} subTitulo={gato.profissao}></Header>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
