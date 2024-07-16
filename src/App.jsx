@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from '/src/componentes/Header.jsx'
+import ListaCartoes from './componentes/ListaCartoes.jsx'
+import Botao from '/src/componentes/Botao.jsx'
+import TesteEstado from './componentes/TesteEstado.jsx'
+import Gato from './componentes/Gato.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+
   let gato = {
     nome: 'Cleitinho',
     profissao: 'Pet da casa'
@@ -13,28 +15,13 @@ function App() {
 
   return (
     <>
-      <Header titulo={'Título1'} subTitulo={'Titulo2'}></Header>
+      
       <Header titulo={gato.nome} subTitulo={gato.profissao}></Header>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ListaCartoes></ListaCartoes>
+      <Botao></Botao>
+      <TesteEstado></TesteEstado>
+      <Gato></Gato>
+
     </>
   )
 }

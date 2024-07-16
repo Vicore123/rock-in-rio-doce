@@ -3,8 +3,6 @@ let estilo = {
     backgroundColor: '#ffffff'
 }
 
-
-
 export default function Header({titulo, subTitulo}) {
     return(
     <header style={estilo}>
