@@ -1,6 +1,14 @@
+import styled from "styled-components";
 import Cartao from "./Cartao.jsx";
+import { Cores } from "./Cores.jsx";
 
-import './ListaCartoes.css'
+
+const StyledList = styled.div`
+   display: flex;
+   width: 500px;
+   justify-content: space-between;
+
+`
 
 export default function ListaCartoes() {
 
@@ -16,12 +24,13 @@ export default function ListaCartoes() {
    }]
 
    return (
-      <div className="pagina">
-
+      <StyledList>
          {pessoas.map(pessoa => (
+            <>
             <Cartao name={pessoa.name} img={pessoa.img} description={pessoa.description}/>
+            </>
          ))}
-         
-      </div>
+      </StyledList>
+      
    )
 }

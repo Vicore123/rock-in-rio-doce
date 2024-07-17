@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Cores } from './Cores'
 
 export default function Botao() {
    let [contagem, setContagem] = useState(0)
