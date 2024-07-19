@@ -1,13 +1,18 @@
-let estilo = {
-    color: 'black',
-    backgroundColor: '#ffffff'
-}
+import { Link } from "react-router-dom"
 
-export default function Header({titulo, subTitulo}) {
+export default function Header() {
     return(
-    <header style={estilo}>
-        <h1>{titulo}</h1>
-        <h2>{subTitulo}</h2>
-    </header>
+        <>
+            <ul>
+                <li>
+                    <Link to={"/"}> Home </Link>
+                </li>
+                <li>
+                    <Link to={"/sobre"}> Sobre</Link>
+                </li>
+            </ul>
+            <h1>Header</h1>
+        </>
+    
     )
 }
